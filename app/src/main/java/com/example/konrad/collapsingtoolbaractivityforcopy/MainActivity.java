@@ -423,9 +423,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                     listaProbna.addAll(NaszeMEtody.cities);
                     for(int i = 0; i < listaProbna.size(); i++){
                         if(listaProbna.get(i).getAddress().matches("null")){
-                            stringsForAlertDialogSearcher.add(i+". "+"Miasto: "+listaProbna.get(i).getCityName()+";");
+                            stringsForAlertDialogSearcher.add(i+1+". "+"Miasto: "+listaProbna.get(i).getCityName()+";");
                         }else{
-                            stringsForAlertDialogSearcher.add(i+". "+listaProbna.get(i).getCityName()+": "+listaProbna.get(i).getAddress()+";");
+                            stringsForAlertDialogSearcher.add(i+1+". "+listaProbna.get(i).getCityName()+": "+listaProbna.get(i).getAddress()+";");
                         }
                     }
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
