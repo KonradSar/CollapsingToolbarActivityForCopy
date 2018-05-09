@@ -98,8 +98,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     ImageView pmtennormal;
     ImageView pmtenexceed;
     ImageView pmtennodata;
-    MediaPlayer myFirstSound;
-    MediaPlayer mySecondSound;
+    MediaPlayer myFirstSound;//Utwór w formacie mp3 o nazwie Click On na licencji Attribution 3.0 pobrany dnia 04.09.2017 godz. 20:00 ze strony https://soundbible.com/
+    MediaPlayer mySecondSound;//Utwór w formacie mp3 o nazwie Computer Error na licencji Attribution 3.0 pobrany dnia 04.09.2017 godz. 20:00 ze strony https://soundbible.com/
+
 
 
     @Override
@@ -367,8 +368,6 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                     } catch (ExecutionException e) {
                         e.printStackTrace();
                     }
-//                    List<AirResults> listaProbna = new ArrayList<AirResults>();
-//                    listaProbna.addAll(NaszeMEtody.cities);
                     if (NaszeMEtody.longitude != 0) {
                         displayData();
                     } else {
@@ -422,30 +421,20 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                     // ponizej gotowa lista miast, ulic i kodow do API
                     final List<AirResults> listaProbna = new ArrayList<AirResults>();
                     listaProbna.addAll(NaszeMEtody.cities);
-                    // tworzymy liste numerow id miast i nazw ulic
-//                    final List<AirResults> citiesIdsAndStreets = new ArrayList<AirResults>();
-//                    // tworzymy zmienna z nazwa miasta w polu tekstowym aplikacji
-//                    String selectedCityName = cityNameTextView.getText().toString();
-//                    // iterujac po liscie miast wypisujemy do listy roboczej nazwy id miasta i ulicy odpowiadajacej zmiennej selectedCityName
-//                    NaszeMEtody.stringsForAlertDialog.clear();
                     for(int i = 0; i < listaProbna.size(); i++){
-//                        if (listaProbna.get(i).getCityName().equals(selectedCityName)){
-//                            citiesIdsAndStreets.add(new AirResults(listaProbna.get(i).getCityNumber(), listaProbna.get(i).getAddress()));
-//                            NaszeMEtody.finalCityStations.add(new AirResults(listaProbna.get(i).getCityNumber(), listaProbna.get(i).getAddress()));
-//                            NaszeMEtody.stringsForAlertDialog.add(listaProbna.get(i).getAddress());
-//                        }
                         if(listaProbna.get(i).getAddress().matches("null")){
                             stringsForAlertDialogSearcher.add(i+". "+"Miasto: "+listaProbna.get(i).getCityName()+";");
                         }else{
                             stringsForAlertDialogSearcher.add(i+". "+listaProbna.get(i).getCityName()+": "+listaProbna.get(i).getAddress()+";");
                         }
-
-
-                }
+                    }
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 builder.setView(alertViewSearcher);
                 builder.setTitle("Manual Search");
-                builder.setIcon(R.drawable.searcher);
+                builder.setIcon(R.drawable.searcher);// Obraz searcher stworzony za pomoca dwoch obrazow pobranych ze stron:
+                    // https://thumbs.dreamstime.com/b/clean-earth-5861646.jpg, data pobrania 08.05.2018, godz. 16:08;
+                    // https://st3.depositphotos.com/1002927/15894/i/1600/depositphotos_158949494-stock-photo-orange-manikin-with-loupe.jpg, data pobrania 08.05.2018, godz. 16:14;
+
                 final View finalV = v;
                 builder.setMessage("Select Current Position From The List");
                 builder.setPositiveButton("Select", new DialogInterface.OnClickListener() {
@@ -564,7 +553,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                     builder.setView(alertView);
                     builder.setTitle("WARNING!!!");
                     builder.setMessage("There is no data for CO assigned to your GPS position");
-                    builder.setIcon(R.drawable.error);
+                    builder.setIcon(R.drawable.error);// Obrazek pobrany ze strony:
+                    // https://st2.depositphotos.com/1431107/8996/v/950/depositphotos_89969512-stock-illustration-404-error-glass-icon.jpg w dniu )1.05.2018, godz. 13:20;
                     builder.create();
                     builder.show();
                 }
@@ -623,7 +613,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                     builder.setView(alertView);
                     builder.setTitle("WARNING!!!");
                     builder.setMessage("There is no data for CO assigned to your GPS position");
-                    builder.setIcon(R.drawable.error);
+                    builder.setIcon(R.drawable.error);// Obrazek pobrany ze strony:
+                    // https://st2.depositphotos.com/1431107/8996/v/950/depositphotos_89969512-stock-illustration-404-error-glass-icon.jpg w dniu )1.05.2018, godz. 13:20;
                     builder.create();
                     builder.show();
                 }
@@ -681,7 +672,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                     builder.setView(alertView);
                     builder.setTitle("WARNING!!!");
                     builder.setMessage("There is no data for CO assigned to your GPS position");
-                    builder.setIcon(R.drawable.error);
+                    builder.setIcon(R.drawable.error);// Obrazek pobrany ze strony:
+                    // https://st2.depositphotos.com/1431107/8996/v/950/depositphotos_89969512-stock-illustration-404-error-glass-icon.jpg w dniu )1.05.2018, godz. 13:20;
                     builder.create();
                     builder.show();
                 }
@@ -739,7 +731,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                     builder.setView(alertView);
                     builder.setTitle("WARNING!!!");
                     builder.setMessage("There is no data for CO assigned to your GPS position");
-                    builder.setIcon(R.drawable.error);
+                    builder.setIcon(R.drawable.error);// Obrazek pobrany ze strony:
+                    // https://st2.depositphotos.com/1431107/8996/v/950/depositphotos_89969512-stock-illustration-404-error-glass-icon.jpg w dniu )1.05.2018, godz. 13:20;
                     builder.create();
                     builder.show();
                 }
@@ -797,7 +790,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                     builder.setView(alertView);
                     builder.setTitle("WARNING!!!");
                     builder.setMessage("There is no data for CO assigned to your GPS position");
-                    builder.setIcon(R.drawable.error);
+                    builder.setIcon(R.drawable.error);// Obrazek pobrany ze strony:
+                    // https://st2.depositphotos.com/1431107/8996/v/950/depositphotos_89969512-stock-illustration-404-error-glass-icon.jpg w dniu )1.05.2018, godz. 13:20;
                     builder.create();
                     builder.show();
                 }
@@ -856,7 +850,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                     builder.setView(alertView);
                     builder.setTitle("WARNING!!!");
                     builder.setMessage("There is no data for Benzene assigned to your GPS position");
-                    builder.setIcon(R.drawable.error);
+                    builder.setIcon(R.drawable.error);// Obrazek pobrany ze strony:
+                    // https://st2.depositphotos.com/1431107/8996/v/950/depositphotos_89969512-stock-illustration-404-error-glass-icon.jpg w dniu )1.05.2018, godz. 13:20;
                     builder.create();
                     builder.show();
                 }
@@ -938,7 +933,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         finalResultsList.addAll(finalValuesList);
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setView(alertViewGeneralInfoForResults);
-        builder.setIcon(R.drawable.result);
+        builder.setIcon(R.drawable.result);// Obrazek pobrany ze strony:
+        // https://thumbs.dreamstime.com/b/d-man-word-text-result-illustration-sitting-rendering-human-people-character-67472513.jpg w dniu 08.05.2018, godz. 22:01;
         builder.setTitle("Already Done");
         builder.setMessage("Data set available for selected city: "+ NaszeMEtody.address+", "+NaszeMEtody.cityName);
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -1365,4 +1361,39 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
     }
 }
-
+// Tapeta w MainActivity kolor żółty pobrana ze strony: https://decorations.pl/environment/cache/images/300_300_productGfx_535883ac13c4849156f60be48c9d9aa5.jpg data pobrania 09.05.2018, godz. 12:09, sciezka:@drawable/yellowplain;
+//Obrazy pobrane w celu stworzenia grafik w Main Activity:
+//Ltera zlota C data pobrania 01.05.18, godz. 17:27:
+//https://www.shutterstock.com/pl/image-illustration/3d-gold-black-metal-letter-c-314139467
+//Cyfra 3 data pobrania 01.05.18, godz. 17:17:
+//https://www.shutterstock.com/pl/image-illustration/3d-gold-black-metal-number-3-314139398?src=kMPfkYs6_LhhGEOO0ANu-g-2-25
+//Cyfra 2 data pobrania 01.05.18, godz. 17:17:
+//https://www.shutterstock.com/pl/image-illustration/3d-gold-black-metal-number-2-314139392?src=XioVz-5KomwWzw1rtuiMBA-1-37
+//Litera O data pobrania 01.05.18, godz. 17:17:
+//https://www.shutterstock.com/pl/image-illustration/3d-gold-black-metal-letter-o-314139455?src=UQLZ5tZpJtUgCmZMLKi8sw-1-59
+//Litera M data pobrania 01.05.18, godz. 17:17:
+//https://www.shutterstock.com/pl/image-illustration/3d-gold-black-metal-letter-m-314139497
+//Litera N data pobrania 01.05.18, godz. 17:17:
+//https://www.shutterstock.com/pl/image-illustration/3d-gold-black-metal-letter-n-314139416
+//Litera S data pobrania 01.05.18, godz. 17:17:
+//https://www.shutterstock.com/pl/image-illustration/3d-gold-black-metal-letter-s-314139443
+//Litera C data pobrania 01.05.18, godz. 17:17:
+//https://www.shutterstock.com/pl/image-illustration/3d-gold-black-metal-letter-c-314139467
+//Cyfra 5 data pobrania 01.05.18, godz. 17:17:
+//https://www.shutterstock.com/pl/image-illustration/3d-gold-black-metal-number-5-314139587?src=ZH4sPltwlylMFUvR_84lzQ-1-27
+//Button X data pobrania 01.05.18, godz. 17:17:
+//https://cdn2.iconfinder.com/data/icons/crystalproject/crystal_project_256x256/actions/button_cancel.png
+//Button ok ptaszek data pobrania 01.05.18, godz. 17:17:
+//http://files.softicons.com/download/system-icons/crystal-project-icons-by-everaldo-coelho/png/256x256/actions/button_ok.png
+//Przecinek , data pobrania 01.05.18, godz. 17:17:
+//https://thumb7.shutterstock.com/display_pic_with_logo/215950/215950,1244069050,1/stock-photo-colon-semicolon-period-comma-from-black-with-gold-shiny-frame-alphabet-set-isolated-on-white-31418779.jpg
+//Cyfra 1 data pobrania 01.05.18, godz. 17:17:
+//https://www.shutterstock.com/pl/image-illustration/3d-gold-black-metal-number-1-314139452?src=am27FARreLX7H50czoDBCw-1-12
+//Litera O data pobrania 01.05.18, godz. 17:17:
+//https://www.shutterstock.com/pl/image-illustration/3d-gold-black-metal-number-0-314139434?src=oO8LAXwWP5TVLMYo438hzQ-1-44
+//Cyfra 6 data pobrania 01.05.18, godz. 17:17:
+//https://www.shutterstock.com/pl/image-illustration/3d-gold-black-metal-number-6-314139539?src=pFaTjjkoLBHTwfbVXLyHMg-1-38
+//Litera H data pobrania 01.05.18, godz. 17:17:
+//https://www.shutterstock.com/pl/image-illustration/3d-gold-black-metal-letter-h-314139407?src=JZuBXEZREWhb7UqxpAPxtA-1-50
+//Znak braku danych data pobrania 01.05.18, godz. 17:17:
+//https://media.istockphoto.com/vectors/red-glossy-forbidden-sign-symbol-vector-id467334720
