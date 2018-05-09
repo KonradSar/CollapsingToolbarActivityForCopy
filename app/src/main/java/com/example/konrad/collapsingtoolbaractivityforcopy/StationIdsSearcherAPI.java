@@ -67,8 +67,7 @@ public class StationIdsSearcherAPI extends AsyncTask<Object, Object, List<AirRes
                 }
 //                preParse = pollutionsIds;
             } else {
-                System.out.println("tabla nie obsluzona");
-            }
+                System.out.println("tabla nie obsluzona");}
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {
