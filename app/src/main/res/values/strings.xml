@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CollapsingToolbarActivityForCopy</string>
+    <string name="title_activity_graphic">Graphic</string>
+    <string name="title_activity_graphics">Graphics</string>
+</resources>
