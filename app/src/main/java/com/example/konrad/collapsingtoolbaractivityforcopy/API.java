@@ -72,5 +72,6 @@ public class API extends AsyncTask<Object, Object, List<AirResults>> {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        return cities;}}
+        return cities;}
+}
 

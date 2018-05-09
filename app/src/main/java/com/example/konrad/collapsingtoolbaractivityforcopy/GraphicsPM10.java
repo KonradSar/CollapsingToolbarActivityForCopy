@@ -98,7 +98,6 @@ public class GraphicsPM10 extends AppCompatActivity {
         BarData theData = new BarData(barDataSet);
         barChart.animateXY(1000, 1000);
         barChart.setData(theData);
-
         // Definiujemy LimitLine z wartoscia jako poziom graniczny dla wartosci dopuszczalnych plus kolor, grubosc i rozmiar textu
         // jednak jest ona tak mala ze nie jest widoczna na skali
         int maxCapacity = 100;

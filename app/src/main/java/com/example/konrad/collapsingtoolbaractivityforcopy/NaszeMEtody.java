@@ -50,5 +50,4 @@ public class NaszeMEtody {
     public static List<FinalValues> nitroDioxideNM = new ArrayList<>();
     public static View v;
     public static String manuallySelectedCityIdOne;
-
 }

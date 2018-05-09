@@ -97,6 +97,5 @@ public class GraphicsBenzene extends AppCompatActivity {
         barChart.setHighlightPerDragEnabled(true);
         xAxis.setDrawAxisLine(true);
         xAxis.setDrawGridLines(false);
-
     }
 }

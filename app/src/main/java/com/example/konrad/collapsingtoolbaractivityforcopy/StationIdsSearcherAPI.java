@@ -75,6 +75,5 @@ public class StationIdsSearcherAPI extends AsyncTask<Object, Object, List<AirRes
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        return pollutionsIds;
-    }
+        return pollutionsIds;}
 }

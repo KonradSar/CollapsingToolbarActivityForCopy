@@ -28,6 +28,7 @@ import static com.example.konrad.collapsingtoolbaractivityforcopy.NaszeMEtody.po
 public class FinalValuesAPI  extends AsyncTask<Object, Object, List<FinalValues>> {
     @Override
     protected List<FinalValues> doInBackground(Object... params) {
+
         finalValuesList.clear();
         URL url = null;
         try {

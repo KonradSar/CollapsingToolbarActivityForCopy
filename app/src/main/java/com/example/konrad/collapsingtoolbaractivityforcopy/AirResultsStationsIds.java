@@ -37,5 +37,6 @@ public class AirResultsStationsIds {
 
     public void setPollutionsIdKey(String pollutionsIdKey) {
         this.pollutionsIdKey = pollutionsIdKey;
+
     }
 }

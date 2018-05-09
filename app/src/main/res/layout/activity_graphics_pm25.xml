@@ -18,7 +18,6 @@
         android:id="@+id/pieChartPMTwoPointFive"
         android:background="@android:color/transparent">
     </com.github.mikephil.charting.charts.BarChart>
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
